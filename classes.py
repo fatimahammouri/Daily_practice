@@ -14,17 +14,27 @@ class Fraction:
         
         print(self.num, "/", self.den)
 
-    def add(self, other_fraction):
+    def __add__(self, other_fraction):
         """method adds two fractions, return result fraction"""
 
-        result_num = self.num * other_fraction.den + other_fraction.num * self.den
+        result_num = self.num*other_fraction.den + other_fraction.num*self.den
         result_den = self.den * other_fraction.den
         # return Fraction(result_num, result_den)
 
         # after adding the helper function we can find the fraction in lowest term 
         common = gcd(result_num, result_den)
-        return Fraction(result_num // common, result_den // common)
-        
+        return Fraction(result_num//common, result_den//common)
+
+
+    def is_equal(self, other_function):
+        """ method returns true if two fractions are equal"""
+
+        return self.num * other_function.den == self.den * other_function.num 
+
+    def __str__(self):
+        """ Method to print Fraction object as string """
+
+        return str(self.num) + "/" + str(self.den)
 
 
 
@@ -42,5 +52,9 @@ def gcd (m, n):
     return n
 
     
-my_fraction = Fraction(5,10)
+my_fraction = Fraction(1,4)
 my_fraction.show()
+other_fraction = Fraction(10, 20)
+other_fraction.show()
+print(my_fraction + other_fraction)
+print(my_fraction.is_equal(other_fraction))
