@@ -19,7 +19,14 @@ class Fraction:
 
         result_num = self.num * other_fraction.den + other_fraction.num * self.den
         result_den = self.den * other_fraction.den
-        return Fraction(result_num, result_den)
+        # return Fraction(result_num, result_den)
+
+        # after adding the helper function we can find the fraction in lowest term 
+        common = gcd(result_num, result_den)
+        return Fraction(result_num // common, result_den // common)
+        
+
+
 
 def gcd (m, n):
     """ Helper function to find greatest common divisor 
@@ -31,8 +38,9 @@ def gcd (m, n):
 
         m = orig_n
         n = orig_m % orig_n
-        
+
     return n
+
     
 my_fraction = Fraction(5,10)
 my_fraction.show()
