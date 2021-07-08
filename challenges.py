@@ -19,7 +19,22 @@ def is_anagram_of_palindrome(word):
     # if there is more than one char whos value == 1
     # return false
 
-    
+    word_dict = {}
+    for char in word:
+        if char not in word_dict:
+            word_dict[char] = 1 
+        else: 
+            word_dict[char] += 1
+
+    print(word_dict)
+    odd_counts = 0
+    for count in word_dict.values():
+        if count % 2 != 0:
+            odd_counts += 1
+    if odd_counts > 1 :
+        return False
+    else :
+        return True
 
 
 
