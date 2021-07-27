@@ -84,3 +84,17 @@ def binary_search(val):
     >>> find_longest(["hi", "bi"])
     "hi"
 """
+# assume first string ==> longest
+# iterate over the list of strings
+# compare next element to longest 
+# if current is longer than longest ==> reassign longest 
+
+
+def find_longest(str_list):
+    index = 0
+    longest = str_list[index]
+    for each_string in str_list:
+        if str_list[index + 1] > longest:
+            longest = str_list[index + 1]
+             
+    return longest
