@@ -144,3 +144,16 @@ def replace_vowels1(string):
         else:
             new_string.append(char)
     return "".join(new_string)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Write a function that takes in two strings and 
+    returns True if the strings are anagrams of one another.
+
+>>> is_anagram('moon', 'noom')
+True
+>>> is_anagram('bat', 'snack')
+False
+>>> is_anagram('', '')
+True
+
+"""
