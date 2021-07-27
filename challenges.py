@@ -91,11 +91,11 @@ def binary_search(val):
 
 
 def find_longest(str_list):
-    index = 0
-    longest = str_list[index]
-    for each_string in str_list:
-        if str_list[index + 1] > longest:
-            longest = str_list[index + 1]
+    
+    longest = str_list[0]
+    for string in str_list:
+        if len(string) > len(longest):
+            longest = string
              
     return longest
 
@@ -124,5 +124,6 @@ def find_occurrence(items_list, target_item):
         
     return items_dict[target_item] 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
