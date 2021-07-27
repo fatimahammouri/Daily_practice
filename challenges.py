@@ -126,4 +126,13 @@ def find_occurrence(items_list, target_item):
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+""" Write a function that takes in a string and returns
+    a string with all vowels replaced with *
+    
+>>> replace_vowels1("string") 
+"str*ng"
+>>> replace_vowels1("Hello") 
+"H*ll*"
+
+"""
 
