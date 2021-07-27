@@ -52,9 +52,42 @@ def gcd (m, n):
     return n
 
     
-my_fraction = Fraction(1,4)
-my_fraction.show()
-other_fraction = Fraction(10, 20)
-other_fraction.show()
-print(my_fraction + other_fraction)
-print(my_fraction.is_equal(other_fraction))
+# my_fraction = Fraction(1,4)
+# my_fraction.show()
+# other_fraction = Fraction(10, 20)
+# other_fraction.show()
+# print(my_fraction + other_fraction)
+# print(my_fraction.is_equal(other_fraction))
+
+# ////////////////////////////////////////////////////////////////////
+
+""" Building a Linked List and Node """   
+
+class Node():
+    """ Node Class
+        attributes:
+        - data
+        - next 
+    """
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList():
+    """ Linked List Class 
+        attributes:
+        - head 
+    """
+    def __init__(self):
+        self.head = None
+
+    def print_all(self):
+
+        current = self.head
+        while current != None:
+            print (current.data)
+            current = current.next
+
+
+
+    

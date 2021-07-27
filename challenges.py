@@ -74,6 +74,4 @@ def binary_search(val):
     return num_guesses
 
 
-
-
-             
+ 
