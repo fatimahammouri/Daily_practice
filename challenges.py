@@ -107,5 +107,22 @@ def find_longest(str_list):
 >>> find_occurrence([1,2,3,4,3,4,6,2,4], 9)
 0
 """
+# declare empty dict
+# iterate over the list
+# construct a dictionary {key : value} ==> {element : number of accurences}
+# return the value for the targeted element
+
+def find_occurrence(items_list, target_item):
+    items_dict = {}
+    for item in items_list:
+        if item not in items_dict:
+            items_dict[item] = 1
+        else:
+            items_dict[item] += 1
+    if target_item not in items_dict:
+        return 0
+        
+    return items_dict[target_item] 
+
 
 
