@@ -74,4 +74,13 @@ def binary_search(val):
     return num_guesses
 
 
- 
+""" Write a function that takes in a list of strings. 
+    Return the longest string in the list.
+
+    >>> find_longest(["a", "abc", "abcd"])
+    "abcd"
+    >>> find_longest([])
+    []
+    >>> find_longest(["hi", "bi"])
+    "hi"
+"""
