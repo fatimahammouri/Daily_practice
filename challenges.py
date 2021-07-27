@@ -38,7 +38,7 @@ def is_anagram_of_palindrome(word):
     else :
         return True
 
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 def binary_search(val):
     """Using binary search, find val in range 1-100. Return # of guesses.
     
@@ -73,7 +73,7 @@ def binary_search(val):
             min = mid      
     return num_guesses
 
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Write a function that takes in a list of strings. 
     Return the longest string in the list.
 
@@ -98,3 +98,14 @@ def find_longest(str_list):
             longest = str_list[index + 1]
              
     return longest
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Write a function that takes in an item and a list
+    Return the number of times the given item appears in the list
+>>> find_occurrence([1,2,3,4,3,4,6,2,4], 4)
+3
+>>> find_occurrence([1,2,3,4,3,4,6,2,4], 9)
+0
+"""
+
+
