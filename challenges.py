@@ -172,3 +172,15 @@ def is_anagram(string1, string2):
 70
 
 """
+
+def largest_smaller(nums, target_num):
+    
+    while nums:
+        less_than_target = []
+        for num in nums:
+            if num < target_num:
+                less_than_target.append(num)
+        result = sorted(less_than_target).pop()
+        return result
+    else:
+        print ("list is Empty")
