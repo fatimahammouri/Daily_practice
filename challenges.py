@@ -161,3 +161,14 @@ def is_anagram(string1, string2):
     if sorted(string1) == sorted(string2):
         return True
     return False
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Write a function that takes in two arguments: 
+    a list of numbers and a number, It should return the largest number
+    in the list that is smaller than the given number
+    [1, 300, 3, 5, 70], 100 => 70
+
+>>> largest_smaller([1, 300, 3, 5, 70], 100)
+70
+
+"""
