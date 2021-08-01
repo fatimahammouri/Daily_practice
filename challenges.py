@@ -184,3 +184,11 @@ def largest_smaller(nums, target_num):
         return result
     else:
         print ("list is Empty")
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Write a function that takes in a list of numbers.
+    It should return True if any two numbers in the list add to 0
+
+"""
+
+    
