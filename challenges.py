@@ -1,7 +1,5 @@
 """ Challenges"""
-
-def is_anagram_of_palindrome(word):
-    """Is the word an anagram of a palindrome?
+""" 1- Is the word an anagram of a palindrome?
 
     >>> is_anagram_of_palindrome("a")
     True
@@ -14,6 +12,7 @@ def is_anagram_of_palindrome(word):
     >>> is_anagram_of_palindrome("arceaceb")
     False
     """
+def is_anagram_of_palindrome(word):
 
     # create a dictionary where 
     # keys: character in given word
@@ -39,8 +38,7 @@ def is_anagram_of_palindrome(word):
         return True
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-def binary_search(val):
-    """Using binary search, find val in range 1-100. Return # of guesses.
+""" 2- Using binary search, find val in range 1-100. Return # of guesses.
     
     >>> binary_search(50)
     1
@@ -52,8 +50,10 @@ def binary_search(val):
     True    
     >>> max([binary_search(i) for i in range(1, 101)])
     7
-    """
+"""
 
+def binary_search(val):
+  
     assert 0 < val < 101, "Val must be between 1-100"
 
     num_guesses = 0
@@ -74,7 +74,7 @@ def binary_search(val):
     return num_guesses
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Write a function that takes in a list of strings. 
+""" 3- Write a function that takes in a list of strings. 
     Return the longest string in the list.
 
     >>> find_longest(["a", "abc", "abcd"])
@@ -100,7 +100,7 @@ def find_longest(str_list):
     return longest
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Write a function that takes in an item and a list
+""" 4- Write a function that takes in an item and a list
     Return the number of times the given item appears in the list
 >>> find_occurrence([1,2,3,4,3,4,6,2,4], 4)
 3
@@ -126,7 +126,7 @@ def find_occurrence(items_list, target_item):
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""" Write a function that takes in a string and returns
+""" 5- Write a function that takes in a string and returns
     a string with all vowels replaced with *
 
 >>> replace_vowels1("string") 
@@ -146,7 +146,7 @@ def replace_vowels1(string):
     return "".join(new_string)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Write a function that takes in two strings and 
+""" 6- Write a function that takes in two strings and 
     returns True if the strings are anagrams of one another.
 
 >>> is_anagram('moon', 'noom')
@@ -163,7 +163,7 @@ def is_anagram(string1, string2):
     return False
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Write a function that takes in two arguments: 
+""" 7- Write a function that takes in two arguments: 
     a list of numbers and a number, It should return the largest number
     in the list that is smaller than the given number
     [1, 300, 3, 5, 70], 100 => 70
@@ -186,7 +186,7 @@ def largest_smaller(nums, target_num):
         print ("list is Empty")
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Write a function that takes in a list of numbers.
+""" 8- Write a function that takes in a list of numbers.
     It should return True if any two numbers in the list add to 0
 
 """
@@ -199,7 +199,7 @@ def add_to_zero(nums):
     return False
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Write a function that takes in a number. Return a number
+""" 9- Write a function that takes in a number. Return a number
     with the digits of the given number, but in reverse order.
 
 >>> reverse_digits(123)
@@ -215,7 +215,7 @@ def reverse_digits(n):
     return int(rev_string)
     
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Given an integer array nums, return true if any value appears
+""" 10- Given an integer array nums, return true if any value appears
     at least twice in the array, and return false if every element is distinct.
 
 [1,2,3,1] ==> true
@@ -227,4 +227,5 @@ def containsDuplicate(nums):
     if len(nums) == len(nums_set): 
         return False
     return True
-        
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
