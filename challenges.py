@@ -197,4 +197,14 @@ def add_to_zero(nums):
         if -num in nums_set:
             return True
     return False
-    
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Write a function that takes in a number. Return a number
+    with the digits of the given number, but in reverse order.
+
+>>> reverse_digits(123)
+321
+>>> reverse_digits(789)
+987
+
+"""
