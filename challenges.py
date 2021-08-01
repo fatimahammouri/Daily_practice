@@ -190,5 +190,11 @@ def largest_smaller(nums, target_num):
     It should return True if any two numbers in the list add to 0
 
 """
-
+def add_to_zero(nums):
+    nums_set = set(nums)
+    print(nums_set)
+    for num in nums:
+        if -num in nums_set:
+            return True
+    return False
     
