@@ -208,3 +208,13 @@ def add_to_zero(nums):
 987
 
 """
+def reverse_digits(n):
+    string_n = str(n)
+    reversed_n = reversed(string_n)
+    rev_string = "".join(reversed_n)
+    return int(rev_string)
+    
+   
+
+
+        
