@@ -221,4 +221,10 @@ def reverse_digits(n):
 [1,2,3,1] ==> true
 [1,2,3,4] ==> false
 """
+
+def containsDuplicate(nums):
+    nums_set = set(nums)
+    if len(nums) == len(nums_set): 
+        return False
+    return True
         
