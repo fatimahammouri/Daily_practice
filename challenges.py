@@ -214,7 +214,11 @@ def reverse_digits(n):
     rev_string = "".join(reversed_n)
     return int(rev_string)
     
-   
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Given an integer array nums, return true if any value appears
+    at least twice in the array, and return false if every element is distinct.
 
-
+[1,2,3,1] ==> true
+[1,2,3,4] ==> false
+"""
         
