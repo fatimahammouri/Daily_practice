@@ -265,6 +265,23 @@ makeArrayConsecutive2(statues) = 3.
 
 Ratiorg needs statues of sizes 4, 5 and 7.
 """
+def makeArrayConsecutive2(statues):
+    # declare a counter
+    # sort the array
+    # iterate over the array
+    # el[i+1] - el[i] = difference 
+    # if diff >1
+    # counter + (difference -1)
+    # return counter
+    
+    counter = 0
+    sorted_list = list(sorted(statues))
+    for i in range(len(sorted_list) - 1):
+        diff = sorted_list[i + 1] - sorted_list[i]
+        if diff > 1:
+            counter += diff - 1
+    return counter
+            
 
 
 
