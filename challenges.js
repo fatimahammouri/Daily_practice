@@ -12,3 +12,15 @@ adjacentElementsProduct(inputArray) = 21.
 7 and 3 produce the largest product.
 
 */ 
+
+function adjacentElementsProduct(inputArray) {
+    largest = inputArray[0] * inputArray[1]
+    for (let i = 1; i < inputArray.length - 1; i++){
+        if ((inputArray[i] * inputArray[i + 1]) > largest){
+           largest = inputArray[i] * inputArray[i + 1] 
+        }
+        
+    }
+    return largest
+    
+}
