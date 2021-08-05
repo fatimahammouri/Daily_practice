@@ -303,7 +303,21 @@ You can remove 3 from the array to get the strictly increasing sequence [1, 2]
 Alternately, you can remove 2 to get the strictly increasing sequence [1, 3].
 """
 
-            
+def almostIncreasingSequence(sequence):
+    copy = sequence 
+    
+    print("original",copy)
+    for i in range(len(sequence)):
+        print(i)
+        element = copy[i]
+        copy.pop(i)
+        print(copy)
+        if copy == list((sorted(set(copy)))): 
+            return True
+        else:
+            copy.insert(i, element)
+            print(sequence)
+    return False           
 
 
 
