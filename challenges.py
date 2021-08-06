@@ -257,8 +257,8 @@ def solution(Arr):
 having an non-negative integer size. Since he likes to make things perfect,
 he wants to arrange them from smallest to largest so that each statue will be
 bigger than the previous one exactly by 1. He may need some additional statues
- to be able to accomplish that. Help him figure out the minimum number of 
- additional statues needed.
+to be able to accomplish that. Help him figure out the minimum number of 
+additional statues needed.
 Example
 For statues = [6, 2, 3, 8], the output should be
 makeArrayConsecutive2(statues) = 3.
@@ -281,6 +281,28 @@ def makeArrayConsecutive2(statues):
         if diff > 1:
             counter += diff - 1
     return counter
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""
+13 --- Given a sequence of integers as an array, determine whether
+it is possible to obtain a strictly increasing sequence by removing 
+no more than one element from the array.
+Note:
+sequence a0, a1, ..., an is considered to be a strictly increasing if a0 < a1 < ... < an.
+Sequence containing only one element is also considered to be strictly increasing.
+Example
+    For sequence = [1, 3, 2, 1], the output should be
+    almostIncreasingSequence(sequence) = false.
+
+    There is no one element in this array that can be removed in order to get a strictly
+    increasing sequence.
+    For sequence = [1, 3, 2], the output should be
+    almostIncreasingSequence(sequence) = true.
+
+You can remove 3 from the array to get the strictly increasing sequence [1, 2]
+Alternately, you can remove 2 to get the strictly increasing sequence [1, 3].
+"""
+
             
 
 
