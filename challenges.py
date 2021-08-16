@@ -324,7 +324,20 @@ def almostIncreasingSequence(sequence):
 An integer is a palindrome when it reads the same backward as
 forward. For example, 121 is palindrome while 123 is not.
 """
-
+def isPalindrome(x:int) -> bool:
+        if x < 0:
+            return False
+        string_version = str(x)
+        start = 0
+        end = len(string_version) - 1
+        mid = (end + start) // 2
+        while start <= end:
+            if string_version[start] == string_version[end]:
+                start = start + 1
+                end = end - 1
+            else:
+                return False
+        return True
 
 
 
