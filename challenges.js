@@ -38,5 +38,38 @@ function unique_string_second(givenString){
 }
     
     
+/* 2
+Given a Node Class 
+class ListNode {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+let node1 = new ListNode(1);
+    How node1 looks on the inside:
+    {
+    value: 1
+    next: null
+    }
+Write a function that reverses the linkedlist and return head of the 
+llist reversed
+*/
+
+function reverse(head) {
+    // Step 1
+      let previous = null
+      let current = head
+      let following = head
+    // Step 2
+      while(current !== null) {
+        following = following.next
+        current.next = previous
+        previous = current          
+        current = following
+      }
+    // Step 3  
+      return previous
+}
 
 

@@ -349,3 +349,58 @@ def unique_string(givenString:str) -> bool:
     return False
 
 
+"""
+# def createDic():
+#     keypad = {}
+#     letters = "abcdefghijklmnopqrstuvwxyz"
+    
+#     i = 2
+#     start = 0
+    
+#     while i < 10:
+#         stop = start + 3
+#         if i == 7 or i == 9:
+#             stop = start + 4    
+#         keypad[i] = list(letters[start:stop])
+#         start = stop
+#         i = i + 1
+#     print(keypad)
+     
+#     keys_list = list(keypad.keys())
+#     values_list = list(keypad.values())
+#     print("#################################################")
+#     print(keys_list)
+#     print(values_list)
+# createDic()
+
+
+
+    
+    
+def segments(message):
+    result_string = ""
+    msg_characters = list(message)
+    print("list of characters*****", msg_characters, end="")
+    total_char = len(msg_characters)
+    print(total_char)
+    segments, remainder_char = divmod(total_char, 154)
+    print("segment == ", segments, "remainder ==", remainder_char)
+    if remainder_char > 0:
+        segments = segments + 1
+    
+    i = 1
+    start = 0
+    stop = 154    
+    while i <= segments:
+        result_string += message[start:stop]  + "(" + str(i) + "/" + str(segments) + ")"
+        start = stop
+        stop = stop * 2 
+        i += 1
+    print (result_string)
+
+
+segments("Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis partu sjhgucxhxcj. bkgasuicgopucpaosjc. lkashco8aclb")
+
+"""
+
+
