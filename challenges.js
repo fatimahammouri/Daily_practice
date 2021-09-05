@@ -25,6 +25,18 @@ function adjacentElementsProduct(inputArray) {
     
 }
 
-
+function unique_string_second(givenString){
+    for (let i = 0; i < givenString.length; i++){
+        let currentChar = givenString[i];
+        for (let j = 0; j < givenString.length; j++){
+            if (givenString[j] == currentChar){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+    
+    
 
 

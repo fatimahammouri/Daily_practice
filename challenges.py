@@ -339,5 +339,13 @@ def isPalindrome(x:int) -> bool:
                 return False
         return True
 
+""""
+15--Implement an algorithm to determine if a string has all unique
+    characters 
+"""
+def unique_string(givenString:str) -> bool:
+    if len(list(givenString)) == len(list(set(givenString))):
+        return True
+    return False
 
 

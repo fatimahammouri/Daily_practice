@@ -87,17 +87,3 @@ class LinkedList():
         while current != None:
             print (current.data)
             current = current.next
-
-"""
-////////////////////////////////////////////////////////////////////
-
-Building a Stack """ 
-# build a new wmpty stack
-stack = []
-# push items into the stack
-stack.append(1)
-stack.append(2)
-stack.append(3)
-# print the stack contents
-print(stack)
-# pop
