@@ -87,3 +87,43 @@ class LinkedList():
         while current != None:
             print (current.data)
             current = current.next
+
+# ////////////////////////////////////////////////////////////////////
+
+"""Given LL head node, return head node of new, reversed linked list.
+
+    >>> ll = Node(data=1, next=Node(data=2, next=Node(data=3, next=Node(4))))
+    >>> reverse_linked_list(ll).print_data()
+    4
+    3
+    2
+    1
+""" 
+class Node():
+    def __init__(self, data, next=None):
+        self.data = data 
+        self.next = next
+
+
+
+def reverse_linked_list(head):
+    # iterating over the llist
+    # current = save the current Node
+    # previousNode = save the current Node 
+    # current = current.next
+    # current.next = previousNode
+    
+    out_head = None
+    current = head
+    while current is not None:
+        # tail = Node('A', None)
+        out_head = Node(current.data, out_head)
+        current = current.next
+
+    return out_head
+
+
+ll = Node(data=1, next=Node(data=2, next=Node(data=3, next=Node(4))))
+ll.print_data()
+print('Reversed Linked List')
+reverse_linked_list(ll).print_data()
