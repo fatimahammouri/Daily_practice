@@ -360,3 +360,32 @@ Output: ("New", "York")
 input: string of words
 outpot: tuple of the 2 words the repeated the most"""
 
+# iterate over the string
+# take tow consecutive words
+# map into a dictionary {pair of words: occurance}
+# return the kay with the largest value
+def get_consecutive_words(input):
+    dict_words = {}
+    input = input.split(" ")
+    print(input)
+    
+    for i in range(len(input) - 1):
+        
+        pair = input[i] +","+ input[i + 1] 
+       
+        if pair not in dict_words:
+            dict_words[pair] = 0
+        if pair in dict_words:
+            dict_words[pair] += 1
+    print(dict_words)
+    sorted_values = sorted(dict_words.values())
+    print (sorted_values[-1])
+    
+    for key, value in dict_words.items():
+        if dict_words[key] == sorted_values[-1]:
+            print(dict_words[key], key.split(","))
+            result =  tuple(key.split(","))
+            print(result)
+            return result
+    print(trydict_words[sorted_values[-1]])
+get_consecutive_words("I want to be a part of it New York New York")
