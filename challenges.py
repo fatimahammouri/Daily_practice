@@ -407,5 +407,11 @@ and you may not use the same element twice.You can return the answer in any orde
 # check if any value when added to the current sums to target 
 # if yes push the indeces for current and the element to results array
 
-
+def twoSum(nums, target):
+    hash_nums = {}
+    for i, num in enumerate(nums):
+        if (target - num) not in hash_nums: 
+            hash_nums[num] = i
+        else:
+            return [hash_nums[target - num], i]
                 
