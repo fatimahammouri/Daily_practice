@@ -389,3 +389,23 @@ def get_consecutive_words(input):
             return result
     print(trydict_words[sorted_values[-1]])
 get_consecutive_words("I want to be a part of it New York New York")
+
+
+
+"""17-- Given an array of integers nums and an integer target,
+return indices of the two numbers such that they add up to target.
+You may assume that each input would have exactly one solution, 
+and you may not use the same element twice.You can return the answer in any order."""
+
+# input: array of integers, target integer
+# output: array of indices for the 2 numbers that sums == target 
+
+# declare an empty results array
+# iterate over the array
+# declare a placeholder for the current value 
+# iterate over the rest of the elements
+# check if any value when added to the current sums to target 
+# if yes push the indeces for current and the element to results array
+
+
+                
