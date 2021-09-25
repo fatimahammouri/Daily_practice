@@ -414,4 +414,8 @@ def twoSum(nums, target):
             hash_nums[num] = i
         else:
             return [hash_nums[target - num], i]
-                
+
+
+"""Given an array of integers nums, return the number of good pairs.
+
+A pair (i, j) is called good if nums[i] == nums[j] and i < j"""
