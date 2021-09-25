@@ -464,4 +464,32 @@ def numJewelsInStones(jewels: str, stones: str) -> int:
             counter += 1
             
     return counter
+
+# Optimized Solution:
+
+# inputs: 2 strings of letters
+# output: integer (number of letters in string-2 that also in string-1)
+
+# declare a counter
+# step1: build a hashmap for string-1
+# step2: iterate over the string-2:
+# step3: if the current letter exists in Hashmap
+#        increase the counter
+# step4: return the counter
+
+
+class Solution:
+    def numJewelsInStones(self, jewels: str, stones: str) -> int:
+        counter = 0
+        
+        hashmap = {}
+        
+        for letter in jewels:
+            if letter not in hashmap:
+                hashmap[letter] = letter 
                 
+        for letter in stones:
+            if letter in hashmap:
+                counter += 1
+                
+        return counter
