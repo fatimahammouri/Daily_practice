@@ -419,3 +419,23 @@ def twoSum(nums, target):
 """Given an array of integers nums, return the number of good pairs.
 
 A pair (i, j) is called good if nums[i] == nums[j] and i < j"""
+
+# inputs: Array of integers
+# output: integer (number of good pairs)
+
+# declare results array
+# step1: iterate over the values in the array
+# step2: take first value and iterate comparing the rest of the values to it 
+# step3: if the number[i] == number [j] 
+# step4: push the pair(i,j) to the results
+# step5: reurn reults length
+
+
+def numIdenticalPairs(nums: List[int]) -> int:
+    results = []
+    for i in range(len(nums)):
+        for j in range(i+ 1, len(nums)):
+            if nums[i] == nums[j]:
+                results.append((i,j))
+    return len(results)
+                    
