@@ -447,3 +447,21 @@ is a type of stone you have. You want to know how many of the stones you have ar
 Letters are case sensitive,
 so "a" is considered a different type of stone from "A"""
 
+# inputs: 2 strings of letters
+# output: integer (number of letters in string-2 that also in string-1)
+
+# step1: declare a counter
+# step2: iterate over the string-2:
+# step3: if the current letter exists in string-1
+#        increase the counter
+# step4: return the counter
+
+
+def numJewelsInStones(jewels: str, stones: str) -> int:
+    counter = 0
+    for letter in stones:
+        if letter in jewels:
+            counter += 1
+            
+    return counter
+                
