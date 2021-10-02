@@ -537,3 +537,46 @@ Sort result by IDj in increasing order.
 
 A student's top five average is calculated by taking the sum of their top five scores
 and dividing it by 5 using integer division."""
+
+# inputs: array of arrays -pairs of (id, score)
+# output: array of arrays -pairs of (id, AvarageScore)
+
+# step1: declare a results array
+# step2: declare an empty hashmap 
+# step3: iterate over the arrays in the given array
+# step4: map the id as key and the score as part of the value(value array of scores)
+#       { id1 : [score1, score2, ...],
+#         id2 : [score1, score2, ...], }
+# step5: calculate avarage of each value 
+#        1. sort the value array 
+#        2. slice it and take the highest 5 values
+#        3. divide the sum of the values over 5
+# step6: append (id, average) to the results array
+# step7: return results array
+
+
+
+def highFive(items: List[List[int]]) -> List[List[int]]:
+    
+    results = []
+    hashmap = {}
+    
+    for item in items:
+        keyID = item[0]
+        score = item[1]
+        if keyID not in hashmap:
+            hashmap[keyID] = []
+        if keyID in hashmap:
+            hashmap[keyID].append(score)        
+    print(hashmap)
+    
+    for key, value in hashmap.items():
+        value = sorted(value)
+        print(value)
+        value = value[-5:]
+        print(value)
+        value = sum(value) // 5
+        print(value)
+        results.append([key, value])
+    return sorted(results)
+            
