@@ -579,4 +579,10 @@ def highFive(items: List[List[int]]) -> List[List[int]]:
         print(value)
         results.append([key, value])
     return sorted(results)
-            
+
+
+'''
+You are given an integer array nums. 
+The unique elements of an array are the elements that appear exactly once in the array.
+Return the sum of all the unique elements of nums
+'''
