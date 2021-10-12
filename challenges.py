@@ -595,22 +595,34 @@ Return the sum of all the unique elements of nums
 # step1: iterate over the array
 # step2: Build a hashmap of elements as keys and their accurance as value
 # step3: iterate over the key, value pairs 
-# step4: if the value == 1 => add it to the counter mmmmmmzx cbnm,.////
+# step4: if the value == 1 => add it to the counter
 # step5: return the counter
 
-class Solution:
-    def sumOfUnique(self, nums: List[int]) -> int:
-        
-        hashmap = {}
-        counter = 0
-        for num in nums:
-            if num in hashmap:
-                hashmap[num] += 1
-            if num not in hashmap:
-                hashmap[num] = 1
-        print(hashmap)
+def sumOfUnique(nums: List[int]) -> int:
     
-        for key,value in hashmap.items():
-            if value == 1:
-                counter += key
-        return counter
+    hashmap = {}
+    counter = 0
+    for num in nums:
+        if num in hashmap:
+            hashmap[num] += 1
+        if num not in hashmap:
+            hashmap[num] = 1
+    print(hashmap)
+
+    for key,value in hashmap.items():
+        if value == 1:
+            counter += key
+    return counter
+
+# Solution with a Counter dict
+from collections import Counter
+
+def sumOfUnique(nums: List[int]) -> int:
+    
+    hashmap = Counter(nums)
+    counter = 0
+    
+    for key,value in hashmap.items():
+        if value == 1:
+            counter += key
+    return counter
