@@ -586,3 +586,31 @@ You are given an integer array nums.
 The unique elements of an array are the elements that appear exactly once in the array.
 Return the sum of all the unique elements of nums
 '''
+
+# inputs: array of integers
+# output: integer numbers
+#        (sum of the elements that wasn't repeated in the inputs array)
+
+
+# step1: iterate over the array
+# step2: Build a hashmap of elements as keys and their accurance as value
+# step3: iterate over the key, value pairs 
+# step4: if the value == 1 => add it to the counter mmmmmmzx cbnm,.////
+# step5: return the counter
+
+class Solution:
+    def sumOfUnique(self, nums: List[int]) -> int:
+        
+        hashmap = {}
+        counter = 0
+        for num in nums:
+            if num in hashmap:
+                hashmap[num] += 1
+            if num not in hashmap:
+                hashmap[num] = 1
+        print(hashmap)
+    
+        for key,value in hashmap.items():
+            if value == 1:
+                counter += key
+        return counter
