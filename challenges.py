@@ -431,7 +431,7 @@ A pair (i, j) is called good if nums[i] == nums[j] and i < j"""
 # step5: reurn reults length
 
 
-def numIdenticalPairs(nums: List[int]) -> int:
+def numIdenticalPairs(nums):
     results = []
     for i in range(len(nums)):
         for j in range(i+ 1, len(nums)):
@@ -514,7 +514,7 @@ Return the answer in an array."""
 # push the counter to the results
 
 
-def smallerNumbersThanCurrent(nums: List[int]) -> List[int]:
+def smallerNumbersThanCurrent(nums):
     results = []
     for i in range(len(nums)):
         
@@ -556,7 +556,7 @@ and dividing it by 5 using integer division."""
 
 
 
-def highFive(items: List[List[int]]) -> List[List[int]]:
+def highFive(items):
     
     results = []
     hashmap = {}
@@ -598,7 +598,7 @@ Return the sum of all the unique elements of nums
 # step4: if the value == 1 => add it to the counter
 # step5: return the counter
 
-def sumOfUnique(nums: List[int]) -> int:
+def sumOfUnique(nums):
     
     hashmap = {}
     counter = 0
@@ -617,7 +617,7 @@ def sumOfUnique(nums: List[int]) -> int:
 # Solution with a Counter dict
 from collections import Counter
 
-def sumOfUnique(nums: List[int]) -> int:
+def sumOfUnique(nums):
     
     hashmap = Counter(nums)
     counter = 0
