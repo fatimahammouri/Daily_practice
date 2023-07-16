@@ -74,6 +74,68 @@ def main():
 
 main()
 
+v = add_item([1,2,3], "foo")
+print(v)
+
+costumes = ["ghost", "witch", "elf", "ogre"]
+costumes.insert(0, "hi")
+name = "elf"
+if name in costumes:
+    costumes.remove(name)
+for item in costumes:
+    print(item)
+
+games = ["Monopoly", "Risk", "Scrabble", "Clue"]
+prices = [34.95, 29.95, 24.95]
+
+w = zip(games, prices)
+print(list(w))
+for game, price in zip(games, prices):
+    print(game, price)
+    
+def sort_list():
+    students = [["Lizzy", "73", "C"],
+                ["Mike", 98, "A"],
+                ["Joel", 88, "B+"],
+                ["Anne", 93, "A"]]
+   
+    for student in students:
+        for item in student:
+            print(item, end=" ")
+    students.sort()
+    print(students)
+    students.reverse()
+    print(students)
+  
+sort_list()  
+    
+games = ["Monopoly", "Risk", "Scrabble", "Clue"]
+for i, game in enumerate(games, start = -10):
+    print(f"{i}. {game}")   
+    
+evenlist = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+print(sum(evenlist,110))
+
+ages = [22, 35, 24, 17, 28]
+ages.insert(0, 4)
+print(ages)
+
+n = [1,2,3,4]
+def factorial(n):
+    fact = 1
+    for number in range(2, n+1):
+        fact - number * fact
+    return fact
+newArr = map(factorial, n)
+print(newArr)
+
+
+costumes = ["ghost", "witch", "elf", "ogre"]
+name = "elf"
+if name in costumes:
+    costumes.remove(name)
+for item in costumes:
+    print(item)
 
     
 
