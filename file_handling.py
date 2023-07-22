@@ -32,8 +32,8 @@ def create_file():
                ["Trig", 3],
                ["Physics", 4],
                ["Yoga", 2]]
-    # Return a writer object responsible for converting the user’s data
-    # into delimited strings on the given file-like object, Here it creates a courses.csv file
+    # csv.writer Returns a writer object responsible for converting the user’s data
+    # into delimited strings on the given file-like object, Here it creates a csv file
     # and writes each elementt in the list courses as a row inside the file 
     with open("courses.csv", "w", newline="") as file:
         writer = csv.writer(file)
@@ -41,7 +41,7 @@ def create_file():
     
     course_list = []
 
-    # csv.reader ==> Return a reader object which will iterate over lines in the given csvfile
+    # csv.reader Return a reader object which will iterate over lines in the given csv file
     # Each row read from the csv file is returned as a list of strings
     with open("courses.csv", newline="") as file:
         reader = csv.reader(file)

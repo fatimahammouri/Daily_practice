@@ -137,6 +137,30 @@ if name in costumes:
 for item in costumes:
     print(item)
 
-    
+# Conditional Expression Syntax
+# expr1 if condition else expr2
+x = 5
+y = 10
+res = x + y if x and y <= 0 else  x * y
+print(res)
 
+# List comprehension Syntax 
+# [ k * k for k in range (1 , n +1) ]
+list_comp = [x * x for x in range(5)]
+print(list_comp)
+
+# set comprehension
+# { k * k for k in range (1 , n +1) }
+set_comp = {x + x for x in range(5)}
+print(set_comp)
+
+# Generator comprehension
+# ( k * k for k in range (1 , n +1) )
+gen = (x * 2 for x in range(5))
+print(gen)
+
+# Dictionary comprehension
+# { k : k * k for k in range (1 , n +1) }
+dict_comp = {x : 1 for x in range(5)}
+print(dict_comp)
     
