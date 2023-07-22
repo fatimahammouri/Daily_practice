@@ -24,3 +24,32 @@ opened = open("file.txt", 'w')
 # A new file is created if the mentioned file doesn’t exist.
 opened.write(new_text)
 # If We want to add content at the end of the file, use the access mode "a" to open a file in append mode
+
+
+import csv
+def create_file():
+    courses = [["Python", 3],
+               ["Trig", 3],
+               ["Physics", 4],
+               ["Yoga", 2]]
+    # Return a writer object responsible for converting the user’s data
+    # into delimited strings on the given file-like object, Here it creates a courses.csv file
+    # and writes each elementt in the list courses as a row inside the file 
+    with open("courses.csv", "w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerows(courses)
+    
+    course_list = []
+
+    # csv.reader ==> Return a reader object which will iterate over lines in the given csvfile
+    # Each row read from the csv file is returned as a list of strings
+    with open("courses.csv", newline="") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            course_list.append(row)
+        print(course_list)
+    for i in range(len(course_list)-1):
+        course = course_list[i]
+        print(f"courses : {course[0]} ({course[1]})")
+       
+create_file()
