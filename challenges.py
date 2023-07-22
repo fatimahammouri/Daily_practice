@@ -243,7 +243,7 @@ def solution(Arr):
     start = 1
     result = []
     while start > 0:
-        if start in A:
+        if start in Arr:
             start += 1
         else:
             return start
@@ -387,7 +387,6 @@ def get_consecutive_words(input):
             result =  tuple(key.split(","))
             print(result)
             return result
-    print(trydict_words[sorted_values[-1]])
 get_consecutive_words("I want to be a part of it New York New York")
 
 
