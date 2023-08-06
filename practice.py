@@ -163,4 +163,15 @@ print(gen)
 # { k : k * k for k in range (1 , n +1) }
 dict_comp = {x : 1 for x in range(5)}
 print(dict_comp)
-    
+
+def is_matching_pair(left, right):   
+    if (left == "(" and right == ")") or (left == "[" and right == "]") or (left == "{" and right == "}"):
+        return True
+    else:
+        return False
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
