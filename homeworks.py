@@ -131,17 +131,25 @@ print("largest_array_sum", largest_array_sum([-2,1,-3,4,-1,2,1,-5,4])) # output:
 # Example:
 # Input: nums = [1, 1, 2, 2, 3, 4, 4]
 # Output: 4 (Explana.on: The first four elements of nums [1, 2, 3, 4] are unique.)
-'''def remove_duplicates(arr):
-    for i in range(1, len(arr)):
-        print(i, i -1)
-        if arr[i] == arr[i - 1]:
-            arr.remove(arr[i -1])
-    return arr  
 
+# decalre variable i, initialized to 0
+# while i value is less than the last elments index
+# check each element and the one after it
+# if equal, remove the element that's duplicated
+# if not equal, increment i 
+def remove_duplicates(arr):
+    i = 0
+    while i < len(arr) - 1:
+        if arr[i] == arr[i + 1]:
+            arr.remove(arr[i + 1])
+        else:
+            i += 1
+    print(arr)
+    return len(arr)
 
-print(remove_duplicates([1,1,2,3,3,4,4]))       
-print(remove_duplicates([1,1,2,2,3,3,4,4,5,6,6]))
-'''
+print("remove_duplicates", remove_duplicates([1,1,2,3,3,4,4]))       
+print("remove_duplicates", remove_duplicates([1,1,2,2,3,3,4,4,5,6,6]))
+
 # Problem 7: Array Partition I
 # Given an array of 2n integers
 # group these integers into n pairs of two elements
@@ -157,12 +165,12 @@ print(remove_duplicates([1,1,2,2,3,3,4,4,5,6,6]))
 # return sum
 def min_sum(arr):
     arr.sort()
-    i = 0
+    current = 0
     sum = 0
-    while i < len(arr):
-        sub = arr[i : i+2]
+    while current < len(arr):
+        sub = arr[current : current+2]
         sum += sub[0]
-        i += 2
+        current += 2
     return sum
 print("min_sum", min_sum([3, 1, 6, 2, 4, 5])) # output: 9
 print("min_sum", min_sum([6, 2, 9, 3, 7, 5])) # output: 14
