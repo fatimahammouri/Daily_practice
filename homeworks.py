@@ -121,7 +121,7 @@ def largest_array_sum(arr):
                 largest_sum = current_sum
                 start = i
                 end = j
-    return arr[start: end+1]
+    return sum(arr[start: end+1])
 
 print("largest_array_sum", largest_array_sum([-2,1,-3,4,-1,2,1,-5,4])) # output: [4, -1, 2, 1]
 
