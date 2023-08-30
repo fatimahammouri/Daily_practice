@@ -93,6 +93,8 @@ def search_target(arr, target):
     return -1
 
 print("search_target", search_target([4,5,6,7,0,1,2], 0)) # output: 4
+print("search_target", search_target([4,5,6,7,0,1,2], 1)) # output: 5
+print("search_target", search_target([4,5,6,7,0,1,2], 9)) # output: -1
 
 # Problem 5: Maximum Subarray Sum
 # Given an integer array nums, find the con.guous subarray
@@ -123,7 +125,8 @@ def largest_array_sum(arr):
                 end = j
     return sum(arr[start: end+1])
 
-print("largest_array_sum", largest_array_sum([-2,1,-3,4,-1,2,1,-5,4])) # output: [4, -1, 2, 1]
+print("largest_array_sum", largest_array_sum([-2,1,-3,4,-1,2,1,-5,4])) # output: sum of [4, -1, 2, 1] = 6
+print("largest_array_sum", largest_array_sum([-2,1,4])) # output: sum of [1, 4] = 5
 
 # Problem 6: Remove Duplicates from Sorted Array
 # Given a sorted array nums, remove the duplicates in-place
