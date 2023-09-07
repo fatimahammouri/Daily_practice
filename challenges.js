@@ -72,4 +72,32 @@ function reverse(head) {
       return previous
 }
 
+// a -> b -> c
+class Node{
+  constructor(value){
+    this.value = value;
+    this.next = null;
+  }
+}
+
+const reverse = (head) => {
+  let current = head;
+  let prev = null;
+  while (current){
+    let nextNode = current.next;
+    current.next = prev;
+    prev = current;
+    current = nextNode
+  }
+  console.log(prev.value);
+};
+
+let node1 = new Node("a");
+let node2 = new Node("b");
+let node3 = new Node("c");
+
+node1.next = node2;
+node2.next = node3;
+
+reverse(node1);
 
